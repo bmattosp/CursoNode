@@ -12,7 +12,7 @@ module.exports = function noticia(app)
         var mysql = require('mysql');
 
         var conection = mysql.createConnection({
-            host: 'localhost:3306',
+            host: 'localhost',
             user: 'cursonode',
             password: '1234',
             database: 'cursonode'
