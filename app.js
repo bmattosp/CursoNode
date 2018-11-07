@@ -7,9 +7,9 @@ var app = require('./config/server.js');
 // app.get("/noticias", requisicaoNoticia);
 
 require('./modules/logaExecucao.js')(app);
-require('./modules/home.js')(app);
-require('./modules/noticia.js')(app);
-require('./modules/Admin/form_add_noticia.js')(app);
+require('./routes/app/home.js')(app);
+require('./routes/app/noticia.js')(app);
+require('./routes/app/form_add_noticia.js')(app);
 
 // function requisicaoHome(req, res)
 // {	
