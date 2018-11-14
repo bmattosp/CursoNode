@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Not�cias</title>
+		</head>
+
+<style>
+    #titulo 
+    {
+        border: 1px solid black;
+        font-size: 50px;               
+                
+    }
+
+    #conteudo 
+    {
+        font-size: 30px;                  
+    }
+</style>
+    
+	<body>
+
+
+		<h1>Not�cias</h1>
+
+		<table>
+			<tr>
+				<td id="titulo"><%=noticia[0].titulo%></td>
+			</tr>
+			<tr>
+				<td id="conteudo"><%=noticia[0].noticia%></td>
+			</tr>
+		</table>
+	</body>
+</html>
