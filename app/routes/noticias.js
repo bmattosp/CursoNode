@@ -1,12 +1,16 @@
-module.exports = function (app)
+module.exports = function (application)
 {   
 
-    app.get("/noticias", function(req, res)
+    application.get("/noticias", function(req, res)
         {
-            var conection = app.config.dbConnection();
-            conection.query("select * from noticias", function (error, result) {
+            var conection = application.config.dbConnection();
+            var noticiasModel = application.app.models.noticiasModel();
+
+            var callback = function (error, result) {
                 res.render("noticias/noticias.ejs", {noticias: result});
-            });            
+            }
+
+            noticiasModel.getNoticias(conection, callback);     
         }
     );
 }

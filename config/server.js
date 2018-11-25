@@ -10,6 +10,7 @@ consign()
     .include('app/routes')
     .then('config/dbConnection.js')
     .then('modules/logaExecucao.js')
+    .then('app/models')
     .into(app);
 
 module.exports = app;
